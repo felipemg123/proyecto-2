@@ -31,17 +31,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
     usuario.nombre
 
-    let user = JSON.parse(`
-    {
-        
-        "nombre": "felipe",
-        "apellido": "murguia",
-        "edad": "27",
+    user = JSON.parse(`
+        {
+            "nombre": "felipe",
+            "apellido": "murguia",
+            "edad":27
+        }
+    `)
+
+    user ["nombre"] = "felipe"
+
+    console.log(user["felipe"]);
+
+    user.nombre = "felipe";
+
+    let array = [1,2,3,4,5]
+
+    for (let key in user) {
+        console.log(key)
+    }   
+
+    for   (let i in array) {
+        console.log (i);
     }
-    `);
-
-    console.log(user.nombre);
-
 
 
 });
